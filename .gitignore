@@ -1,0 +1,4 @@
+.DS_Store
+wandb/
+wandb*
+mask_rcnn_coco.h5
