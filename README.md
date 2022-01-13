@@ -1,5 +1,6 @@
-# Using Mask R-CNN to detect Car Damage
-Using the amazing Matterport's [Mask_RCNN](https://github.com/nicolasmetallo/Mask_RCNN) implementation and following Priya's [example](https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/), I trained an algorithm that highlights areas where there is damage to a car (i.e. dents, scratches, etc.). You can run the step-by-step notebook in Google Colab or use the following:
+# Using Mask R-CNN for Food Segmentation
+
+You can run the step-by-step notebook in Google Colab or use the following:
 ```
 Usage: import the module (see Jupyter notebooks for examples), or run from
        the command line as such:
@@ -21,10 +22,8 @@ Usage: import the module (see Jupyter notebooks for examples), or run from
 """
 ```
 
-![Output Detection](output.gif)
-
 ## Gather training data
-Use the [google-images-download](https://github.com/hardikvasa/google-images-download) library or look manually for images in Google Images or Flickr. I chose Flickr and filter by the photos allowed for 'commercial and other mod uses'. I downloaded 80 images into the 'images' folder.
+I use my own image, i have attached it to this repo
 
 ## Installation
 This script supports Python 2.7 and 3.7, although if you run into problems with TensorFlow and Python 3.7, it might be easier to just run everything from Google Colaboratory notebook.
@@ -47,8 +46,6 @@ $ python3 build_dataset.py --data_dir='images' --output_dir='dataset'
 
 ## Annotate images
 There's no standard way to annotate images, but the [VIA tool](http://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html) is pretty straightforward. It saves the annotation in a JSON file, and each mask is a set of polygon points. Here's a [demo](http://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html) to get used to the UI and the parameters to set. Annotate the images in the 'train' and 'val' folders separately. Once you are done, save the exported 'via_region_data.json' to each folder.
-
-![VIA annotation](via-annotation-ui.png)
 
 ## Train your model
 We download the 'coco' weights and start training from that point with our custom images (transfer learning). It will download the weights automatically if it can't find them. Training takes around 4 mins per epoch with 10 epochs.
