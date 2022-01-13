@@ -88,11 +88,11 @@ print('Uploaded file with ID {}'.format(uploaded.get('id')))
 from google.colab import drive
 drive.mount('/content/drive')
 # Look for 'mask_rcnn_damage_0010.h5' and copy to the working directly
-!cp 'drive/My Drive/mask_rcnn_damage_0010.h5' 'car-damage-detector'
+!cp 'drive/My Drive/mask_rcnn_maskrcnn.h5' 'instance-aware-semantic-segmentation-for-food-calorie-estimation'
 ```
 
 # Apply color splash to an image
 ```
-$ python3 custom.py splash --weights=logs/damage20181007T0431/mask_rcnn_damage_0010.h5 --image=dataset/test/67.jpg
+$ python3 custom.py splash --weights=logs/damage20181007T0431/mask_rcnn_maskrcnn.h5 --image=dataset/test/67.jpg
 ```
 or run ```inspect_custom_model.ipynb```
