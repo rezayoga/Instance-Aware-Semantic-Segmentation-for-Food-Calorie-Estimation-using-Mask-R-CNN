@@ -87,7 +87,7 @@ print('Uploaded file with ID {}'.format(uploaded.get('id')))
 # Mount Drive folder
 from google.colab import drive
 drive.mount('/content/drive')
-# Look for 'mask_rcnn_damage_0010.h5' and copy to the working directly
+# Look for 'mask_rcnn_maskrcnn.h5' and copy to the working directly
 !cp 'drive/My Drive/mask_rcnn_maskrcnn.h5' 'instance-aware-semantic-segmentation-for-food-calorie-estimation'
 ```
 
