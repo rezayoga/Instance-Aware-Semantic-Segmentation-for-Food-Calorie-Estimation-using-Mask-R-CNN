@@ -93,6 +93,6 @@ drive.mount('/content/drive')
 
 # Apply color splash to an image
 ```
-$ python3 custom.py splash --weights=logs/damage20181007T0431/mask_rcnn_maskrcnn.h5 --image=dataset/test/67.jpg
+$ python3 custom.py splash --weights=logs/foodcal/mask_rcnn_maskrcnn.h5 --image=dataset/test/67.jpg
 ```
 or run ```inspect_custom_model.ipynb```
